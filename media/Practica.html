@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" type="text/css" href="css/mainBxSlider.css">
+	<!-- jQuery library (served from Google) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- bxSlider Javascript file -->
+	<script src="js/jquery.bxslider.js"></script>
+	<!-- bxSlider CSS file -->
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="images\logo.png" alt="Logo" class="logo" />
+      <!--<div class="prizv">Мы сближаем города, вы – живете там, где хотите</div>-->
+      <div class="buttons">
+        <form class="button-email">
+          
+            <label><input  class="email" type="email" name="pochta" placeholder="Электронная почта" required="required"></label>
+            <button class="button-pod button-primary">
+              <span class="button-text">Подписка</span>
+            </button>
+          
+          </form>
+        <a href="#o nas" class="vhod">
+          <button class="button button-primary">
+            <span class="button-text">О нас</span>
+          </button>
+        </a>
+        <a href="#otzv" class="vhod">
+          <button class="button button-primary">
+            <span class="button-text">Отзывы</span>
+          </button>
+        </a>
+        <a href="#save" class="vhod">
+          <button class="button button-primary">
+            <span class="button-text">Акции</span>
+          </button>
+        </a>
+        <a href="#result" class="vhod">
+          <button class="button button-primary" >
+            <span class="button-text">Поиск</span>
+          </button>
+        </a>
+        <button class="button" id="cartButton">
+          <span class="button-text">Войти</span>
+        </button>
+      </div>
+    </header>
+  </div>
+  
+  <main class="main">
+   <div class="slider">
+     <ul class="bxslider">
+  		  <li><img src="images/aircrafts/face.jpg" ></li>
+  		  <li><img src="images/aircrafts/960.jpg" ></li>
+  	  	<li><img src="images/aircrafts/airbus.jpg" ></li>
+  	  	<li><img src="images/aircrafts/aircraft.jpg" ></li>
+        <li><img src="images/aircrafts/Bombardier.jpg" ></li>
+	    </ul>
+
+	   <script>
+		    jQuery(document).ready(function(){
+		  	jQuery('.bxslider').bxSlider({
+		  		autoStart: true,
+		  		auto: true,
+		  		pause: 3500,
+		  		autoDirection: 'next',
+	  			autoHover: true
+	  		  });
+	  	  });
+	    </script>
+    </div>
+
+    <section class="save">
+      <a name="save"></a>
+      <h2 class="save-title">Наши выгодные предложения для Вас на сегодняшний день</h2>
+      <div class="cards">
+        <div class="card one">
+          <img class="card-img" src="images/plan-road-trip-tips-ideas.jpg">
+          <p class="text-save">Акция 3 + 1</p>
+          <p class="text-save-text">при покупки 3 билетов - 4 в подарок</p>
+        </div>
+        <div class="card two">
+          <img class="card-img" src="images/road-trip (1).jpg">
+          <p class="text-save">Скидка 15 %</p>
+          <p class="text-save-text">на богаж при весе более 10 кг</p>
+        </div>
+        <div class="card free">
+          <img class="card-img" src="images/airline-staff-never-fat-British-Airways-711420.jpg">
+          <p class="text-save">Бонус 5 %</p>
+          <p class="text-save-text">при оформлении подписки</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a name="result"></a>
+  <section class="form">
+    <div class="form-text-text">
+      <h1 class="form-text">Поиск дешёвых авиабилетов</h1>
+    </div>
+    <div class="form-text-text">
+      <h1 class="text-form">Мы сближаем города, вы – живете там, где хотите</h1>
+    </div>
+    <div class="form-form">
+        <form class="form-blank" action="result.html">
+          <div class="form-blank-one">
+            <label><input class="form-blank-where" type="text" placeholder="Откуда" maxlength="16" required="required">
+            </label>
+            <div class="otstup"></div>
+            <label><input class="form-blank-much" type="text" placeholder="Куда" maxlength="16" required="required">
+            </label>
+            <div class="otstup"></div>
+            <label><input class="form-blank-date" type="date" value="2024-07-22" min="2024-01-01" max="2025-12-31"/>
+            </label>
+            <div class="otstup"></div>
+            <label><input class="form-blank-date" type="date" value="2024-07-22" min="2024-01-01" max="2025-12-31"/>
+            </label>
+            <div class="otstup"></div>
+            <select class="form-blank-posicion" id="C">
+              <option value="C">1 пасажир</option>
+              <option value="C">2 пасажира</option>
+              <option value="C">3 пасажира</option>
+              <option value="C">4 пасажира</option>
+              <option value="C">5 пасажиров</option>
+              <option value="C">6 пасажиров</option>
+              <option value="C">7 пасажиров</option>
+              <option value="C">8 пасажиров</option>
+              <option value="C">9 пасажиров</option>
+            </select>
+          </div>     
+          <a href="result.html" class="vhod">
+            <button class="form-blank-find">
+             Найти билет
+            </button>
+          </a>
+        </form>
+    </div>
+    <a name="o nas"></a>
+    <div class="me-text">
+      <h1 class="me-me">О нас на сегодняшний день</h1>
+    </div>
+    <div class="me-reviews">
+      <div class="me-review">
+        <img class="me-img" src="images/promotions/promotion1.jpg">
+        <div class="me-text-me">
+          <h2 class="me">Возврат и замена Ваших билетов</h2>
+          <p class="me-t-me">Пандемия изменила планы многих путешественников, но мы знаем, что это не будет длиться вечно. Когда все это закончится, мы продолжим исследовать этот мир так, как привыкли. Специальные правила, разработанные для этой сложной ситуации, помогут вам отменить свою поездку или отложить ее на более поздний срок.</p>
+        </div>
+      </div>
+      <div class="me-review">
+        <img class="me-img" src="images/promotions/promotion2.jpg">
+        <div class="me-text-me">
+          <h2 class="me">Лучшие предложения</h2>
+          <p class="me-t-me">Снова увидеть улицы, которые были свидетелями столь многого. Обнять своих любимых и оглянуться назад, чтобы увидеть, через что вы прошли. И подумать о новых мечтах, которые будут такими особенными!</p>
+        </div>
+      </div>
+      <div class="me-review">
+        <img class="me-img" src="images/promotions/promotion3.jpg">
+        <div class="me-text-me">
+          <h2 class="me">Увидимся почаще</h2>
+          <p class="me-t-me">С начала января мы расширяем географию полетов по России, чтобы вы могли чаще видеться со своими близкими. Выбирайте нашу компанию, чтобы лететь туда, где вас всегда ждут.</p>
+        </div>
+      </div>
+      <div class="me-review">
+        <img class="me-img" src="images/promotions/promotion4.jpg">
+        <div class="me-text-me">
+          <h2 class="me">Все снова включено</h2>
+          <p class="me-t-me">С 10 августа мы возобновляем полеты в Турцию. Рейсы из Москвы в Анталию будут выполняться дважды в день ежедневно, а рейсы по маршруту Москва-Даламан будут выполняться от трех до семи раз в неделю.</p>
+        </div>
+      </div>
+    </div>
+    
+    <a name="otzv"></a>
+    <div class="me-text">
+      <h1 class="me-me">Что думают о Нас наши пасcажиры?</h1>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <div class="com">
+          <img class="comment-img" src="images/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png">
+          <div class="comment-glav">
+            <h3 class="name">Екатерина Бойко</h3>
+            <p class="put">Москва - Питер</p>
+            <div class="ocenka">
+              <img src="images/Vector.svg" class="rating-image">
+              <p class="cifr">4.5</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="comment-text">
+          <p>Рейс был немного задержан из за плохой погоды, но в целом полет прошел хорошо.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="com">
+          <img class="comment-img" src="images/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png">
+          <div class="comment-glav">
+            <h3 class="name">Артамонова Альбина</h3>
+            <p class="put">Москва - Крым</p>
+            <div class="ocenka">
+              <img src="images/Vector.svg" class="rating-image">
+              <p class="cifr">4</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="comment-text">
+          <p>Полет прошел хорошо, но были проблемы с багажом.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="com">
+          <img class="comment-img" src="images/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png">
+          <div class="comment-glav">
+            <h3 class="name">Новиков Тихон</h3>
+            <p class="put">Якутия - Москва</p>
+            <div class="ocenka">
+              <img src="images/Vector.svg" class="rating-image">
+              <p class="cifr">5</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="comment-text">
+          <p>Ставлю отлично! Достаточно дешево и комфортно. Экипаж отзывчивый, что очень радует.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="com">
+          <img class="comment-img" src="images/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png">
+          <div class="comment-glav">
+            <h3 class="name">Шахмурзаева Алиса</h3>
+            <p class="put">Москва - Таганрог</p>
+            <div class="ocenka">
+              <img src="images/Vector.svg" class="rating-image">
+              <p class="cifr">4.5</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="comment-text">
+          <p>Рейс задержали по непонятным причинам, но я смогла долететь точно в срок.</p>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="com">
+          <img class="comment-img" src="images/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png">
+          <div class="comment-glav">
+            <h3 class="name">Титова Анна</h3>
+            <p class="put">Москва - Челябинск</p>
+            <div class="ocenka">
+              <img src="images/Vector.svg" class="rating-image">
+              <p class="cifr">4.5</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="comment-text">
+          <p>Летела к подруге в гости, давно не виделись. Спасибо компании за полет без происшествий!</p>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="com">
+          <img class="comment-img" src="images/gas-kvas-com-p-logotip-cheloveka-na-prozrachnom-fone-4.png">
+          <div class="comment-glav">
+            <h3 class="name">Пчеловодов Александр</h3>
+            <p class="put">Берлин - Кишенёв</p>
+            <div class="ocenka">
+              <img src="images/Vector.svg" class="rating-image">
+              <p class="cifr">5</p>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <div class="comment-text">
+          <p>Впервые решил попробавать данную авиакомпанию. Остался доволен ;-)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container-con">
+      <div class="footer-block">
+        <img src="images/logo.png" alt="" class="logo footer-logo">
+        <div class="dano">
+          <p class="nomer">Звонить по номеру: 8(926)495-59-77</p>
+          <p class="dano-name">Балан Амадей Андрианович</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title">Вход</h3>
+        <button class="close">&times;</button>
+      </div>
+      <form action="kabin.html">
+        <div class="modal-body">
+          <p class="modal-text">Номер телефона: <input class="modal-body-nomer" type="tel" placeholder="+7 999 999 99-99 " pattern="[+]7 [0-9]{3} [0-9]{3} [0-9]{2}-[0-9]{2}" required="required"></p>
+          <label class="modal-text">Пароль: <input class="modal-body-password" type="password" placeholder="Введите пароль" maxlength="16" required="required"></label>
+        </div>
+          <div class="footer-buttons">
+            <div class="primary">
+              <a href="kabin.html" class="vhod">
+                <button class="button button-primar" type="submit">Вход</button>
+              </a>
+              <button class="button" id="cartButton_registr">Регистрация</button>
+            </div>
+          <button class="button">Не помню пароль</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-two">
+    <div class="modal-dialog-two">
+      <div class="modal-header-two">
+        <h3 class="modal-title-two">Регистрация</h3>
+        <button class="close-two">&times;</button>
+      </div>
+      <form action="registr.html">
+        <div class="modal-body-two">
+          <p><label class="modal-text-two">Фамилия: <input class="modal-body-text-one" type="text" placeholder="Введите Имя" maxlength="15" required="required"></label></p>
+          <p><label class="modal-text-two">Имя: <input class="modal-body-text-two" type="text" placeholder="Введите Фамилию" maxlength="15" required="required"></p></p>
+          <p><label class="modal-text-two">Номер документа: <input class="modal-body-nomer-two" type="tel" placeholder="40 00 700000 " pattern="[0-9]{2} [0-9]{2} [0-9]{6}" required="required"></label></p>
+          <p><label class="modal-text-two">Номер телефона: <input class="modal-body-nomer-free" type="tel" placeholder="+7 999 999 99-99 " pattern="[+]7 [0-9]{3} [0-9]{3} [0-9]{2}-[0-9]{2}" required="required"></label></p>
+          <p><label class="modal-text-two">Пароль: <input class="modal-body-password-two" type="password" placeholder="Введите пароль" maxlength="16" required="required"></label></p>
+          <div id="pass-1"></div>
+          <p><label class="modal-text-two">Повторите пароль: <input class="modal-body-password-free" type="password" placeholder="Введите пароль" maxlength="16" required="required"></label></p>
+        </div>
+        <a href="registr.html" class="vhod">
+          <button class="button">Зарегистрироваться</button>
+        </a>
+      </div>
+      </form>
+  </div>
+  
+  <script src="js/main.js"></script>
+
+</body>
+</html>
